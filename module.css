@@ -1,0 +1,282 @@
+.navbar {}
+
+.navbar__container {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 10px 90px;
+    z-index: 50;
+    background-color: rgb(17, 17, 17);
+}
+
+.navbar__logo img {
+    height: 50px;
+    padding-bottom: 10px;
+    padding-right: 70px;
+}
+
+.navbar__nav {
+    display: flex;
+}
+
+.navbar__nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__nav-item {
+    margin-left: 1rem;
+}
+
+.navbar__nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(217, 161, 255);
+}
+
+
+
+
+
+
+.hero__section {
+    position: relative;
+    margin-bottom: -8px;
+    font-size: xx-large;
+
+}
+
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 0%;
+
+}
+
+.section {
+    position: relative;
+    margin-bottom: -8px;
+}
+
+.hero__background {
+    width: 100%;
+    height: 100vh;
+}
+
+.hero__logo {
+    width: 150px;
+    margin-bottom: -50px;
+    margin-top: 100px
+}
+
+.hero_title {}
+
+.highlight {
+    color: rgb(191, 129, 202)
+}
+
+.hero__description {
+    font-weight: lighter;
+    color: rgb(190, 190, 190)
+}
+
+
+
+.about-us__section {
+    position: relative;
+    margin-bottom: -8px;
+    height: 100vh;
+    font-size: xx-large;
+
+}
+
+
+.about-us__background {
+    width: 100%;
+    height: 100vh;
+}
+
+.about-us__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 0%;
+
+}
+
+
+
+
+
+
+
+
+.plans__section {
+    background-color: rgb(17, 17, 17);
+    height: 80vh;
+    padding: 10vh 0px;
+}
+
+.plans__title {
+    text-align: center;
+    color: white
+}
+
+.plans__cards-container {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.plans__card-container-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.plans__card-container-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.plans__card-container-card-description {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.plans__card-container-card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.plans__card-container-card-list li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.plans__card-container-card-price-button {
+    background-color: rgb(217, 161, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.plans__buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.plans__buttons-container-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+
+
+
+
+.contact {
+    background-color: rgb(17, 17, 17);
+    height: 70vh;
+    padding: 10vh 0px;
+}
+
+.contact__title {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.contact__form {
+    background-color: #f7f7f7;
+    padding: 30px;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact__form h2 {
+    margin-bottom: 20px;
+}
+
+.contact__form-row {
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.conatct__button-container {
+    display: flex;
+    align-items: center;
+}
+
+.contact__button {
+    background-color: rgb(217, 161, 255);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 50%;
+}
+
+.contact__button:hover {
+    background-color: #444;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}

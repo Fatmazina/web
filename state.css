@@ -1,0 +1,30 @@
+.hero__arrow:hover {
+    color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+.plans__buttons-container-button.active {
+    background-color: rgb(217, 161, 255);
+    color: white;
+}
+
+.plans__buttons-container-button:hover {
+    background-color: rgb(175, 128, 220);
+}
+
+.plans__card-container-card-price-button:hover {
+    background-color: rgb(175, 128, 220);
+}
+.plans__card-container-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

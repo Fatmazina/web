@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud24 Connect</title>
+    <link rel="icon" href="./pics/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./module.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <link rel="stylesheet" href="./state.css" />
+    <link rel="stylesheet" href="./base.css" />
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <svg>
+            <g>
+              <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+            </g>
+            <g>
+              <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+            </g>
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">
+                <img style="height: 50px; padding-bottom: 10px; padding-right: 70px" alt="logo" src="./pics/logo.png" />
+            </div>
+            <nav class="navbar__nav">
+                <ul class="navbar__nav-list">
+                    <li class="navbar__nav-item">
+                        <a class="navbar__nav-link" href="#section1">About</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a class="navbar__nav-link" href="#section2">Cloud VPS Plans</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a class="navbar__nav-link" href="#section3">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <container> </container>
+    <main>
+        <section id="section0" class=" hero__section">
+            <div>
+                <img class="hero__background" alt="background" src="./pics/bg5.png" />
+            </div>
+
+            <div class="hero__content">
+                <img class="hero__logo" alt="logo" src="./pics/logo.png" />
+
+                <h1 class="hero__title" id="dynamicHeading">
+                    Best
+                    <span class="highlight">
+                        VPS Servers </span> Provider
+                </h1>
+                <p class="hero__description" id="dynamicParagraph">
+                    One Public IP included with each server (more on request to
+                    justification) Your Choice of any OS (CentOS, Windows, Debian,
+                    Fedora) FREE Reboots
+                </p>
+            </div>
+
+            <!-- Arrows for navigation -->
+            <div class="hero__arrows">
+                <span class="hero__arrow hero__arrow--left" id="leftArrow">&#9664;</span>
+                <span class="hero__arrow hero__arrow--right" id="rightArrow">&#9654;</span>
+            </div>
+        </section>
+        <section id="section1" class="about-us__section">
+            <div class="about-us__background">
+                <img class="about-us__background" alt="background" src="./pics/bg4.png"  />
+            </div>
+
+            <div class="about-us__content">
+                <h1 style="">About us</h1>
+                <p style="color: rgb(190, 190, 190); font-weight: lighter">
+                    At Cloud24 Connect, we understand that every business has unique
+                    needs. That's why we offer complete IT integration services based on
+                    Cloud solutions, available both in predefined packages and fully
+                    customized solutions. We are committed to delivering services that
+                    precisely meet your specific needs, all at competitive rates.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+   <section id="section2" class="plans__section">
+    <h2 class="plans__title" >
+        Ready to get started? Choose your VPS Plan.
+    </h2>
+    <div class="plans__buttons-container">
+        <button class="plans__buttons-container-button active" onclick="showCards('cloud-vps')">Cloud VPS</button>
+        <button class="plans__buttons-container-button" onclick="showCards('cloud-bandwidth')">Cloud VPS Bandwidth Boost</button>
+    </div>
+
+    <div id="cloud-vps" class="plans__cards-container ">
+        <article class="plans__card-container-card">
+            <h3 class="plans__card-container-card-title">Cloud VPS Starter</h3>
+            <p class="plans__card-container-card-description">
+                Start strong with our Basic VPS Pack: a cost-effective solution for your essential needs.
+            </p>
+            <ul class="plans__card-container-card-list">
+                <li><strong>1</strong> vCPU</li>
+                <li><strong>2GB</strong> RAM</li>
+                <li><strong>50GB</strong> SSD Storage</li>
+                <li><strong>1</strong> Public IP</li>
+                <li><strong>10Mbps</strong> Unmetered</li>
+                <li>24/7 Unlimited Support</li>
+            </ul>
+            <button class="plans__card-container-card-price-button">Get Prices</button>
+        </article>
+
+        <article class="plans__card-container-card">
+            <h3 class="plans__card-container-card-title">Cloud VPS Medium</h3>
+            <p class="plans__card-container-card-description">
+                Find the perfect balance with our Medium VPS Pack: enhanced performance and value.
+            </p>
+            <ul class="plans__card-container-card-list">
+                <li><strong>2</strong> vCPU</li>
+                <li><strong>4GB</strong> RAM</li>
+                <li><strong>100GB</strong> SSD Storage</li>
+                <li><strong>1</strong> Public IP</li>
+                <li><strong>10Mbps</strong> Unmetered</li>
+                <li>24/7 Unlimited Support</li>
+            </ul>
+            <button class="plans__card-container-card-price-button">Get Prices</button>
+        </article>
+
+        <article class="plans__card-container-card">
+            <h3 class="plans__card-container-card-title">Cloud VPS Performance</h3>
+            <p class="plans__card-container-card-description">
+                Unlock powerful capabilities with our Performance VPS Pack, designed for demanding apps.
+            </p>
+            <ul class="plans__card-container-card-list">
+                <li><strong>4</strong> vCPU</li>
+                <li><strong>8GB</strong> RAM</li>
+                <li><strong>200GB</strong> SSD Storage</li>
+                <li><strong>1</strong> Public IP</li>
+                <li><strong>10Mbps</strong> Unmetered</li>
+                <li>24/7 Unlimited Support</li>
+            </ul>
+            <button class="plans__card-container-card-price-button">Get Prices</button>
+        </article>
+    </div>
+
+    <div id="cloud-bandwidth" class="plans__cards-container hidden">
+        <article class="plans__card-container-card">
+            <h3 class="plans__card-container-card-title">VPS Server 1Gbps</h3>
+            <p class="plans__card-container-card-description">
+                Elevate your business with our Performance VPS Pack featuring 1Gbps bandwidth.
+            </p>
+            <ul class="plans__card-container-card-list">
+                <li><strong>4</strong> vCPU</li>
+                <li><strong>8GB</strong> RAM</li>
+                <li><strong>200GB</strong> SSD Storage</li>
+                <li><strong>1</strong> Public IP</li>
+                <li><strong>1Gbps</strong> Unmetered</li>
+                <li>24/7 Unlimited Support</li>
+            </ul>
+            <button class="plans__card-container-card-price-button">Get Prices</button>
+        </article>
+
+        <article class="plans__card-container-card">
+            <h3 class="plans__card-container-card-title">VPS Server 10Gbps</h3>
+            <p class="plans__card-container-card-description">
+                Push the limits with our Performance VPS Pack boasting 10Gbps bandwidth.
+            </p>
+            <ul class="plans__card-container-card-list">
+                <li><strong>4</strong> vCPU</li>
+                <li><strong>8GB</strong> RAM</li>
+                <li><strong>200GB</strong> SSD Storage</li>
+                <li><strong>1</strong> Public IP</li>
+                <li><strong>10Gbps</strong> Unmetered</li>
+                <li>24/7 Unlimited Support</li>
+            </ul>
+            <button class="plans__card-container-card-price-button">Get Prices</button>
+        </article>
+    </div>
+</section>
+
+
+    <section id="section3" class="contact">
+        <h2 class="contact__title" >
+            Need Help? Sure we are Online!
+        </h2>
+
+        <div class="contact__form">
+            <form action="#" method="POST">
+                <div class="contact__form-row">
+                    <input type="text" name="first_name" placeholder="First Name" required />
+                    <input type="text" name="last_name" placeholder="Last Name" required />
+                </div>
+                <div class="contact__form-row">
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <input type="tel" name="phone" placeholder="Your Phone (Optional)" />
+                </div>
+                <div class="contact__form-row">
+                    <select name="option" required>
+                        <option value="" disabled selected>
+                            Choose an Option or leave it for Others
+                        </option>
+                        <option value="support">Support</option>
+                        <option value="sales">Sales</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="contact__form-row">
+                    <textarea name="details" placeholder="Give us more details..." required></textarea>
+                </div>
+                <div class="contact__button-container"> 
+                    <button type="submit" class="contact__button"
+                
+        >
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer" >
+        <div class="footer-content" >
+            <p>&copy; All Rights Reserved. © 2024 | Cloud24 Connect</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" id="backToTop"> &#x25B2; </a>
+
+    <script>
+        function showCards(sectionId) {
+            document.getElementById("cloud-vps").classList.add("hidden");
+            document.getElementById("cloud-bandwidth").classList.add("hidden");
+            document.getElementById(sectionId).classList.remove("hidden");
+            var buttons = document.querySelectorAll(".plans__buttons-container-button");
+            buttons.forEach(function (button) {
+                button.classList.remove("active");
+            });
+            event.target.classList.add("active");
+        }
+
+        window.onscroll = function () {
+            var backToTop = document.getElementById("backToTop");
+            if (
+                document.body.scrollTop > 200 ||
+                document.documentElement.scrollTop > 200
+            ) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        };
+
+        const contentArray = [
+            {
+                heading:
+                    'Best <h style="color:rgb(191,129,202);"> VPS Servers </h> Provider',
+                paragraph:
+                    "One Public IP included with each server (more on request to justification) Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots",
+            },
+            {
+                heading:
+                    'Find Your Perfect <h style="color:rgb(191,129,202);"> Network </h> Solution',
+                paragraph:
+                    "VPS with Unmetered Bandwidth, Proxy solution, Firewall and VPN As A Service, LoadBalancer As A Service.",
+            },
+            {
+                heading:
+                    'Best <h style="color:rgb(191,129,202);"> Based Cloud Services </h>',
+                paragraph:
+                    "Storage solution, Managed NextCloud, Managed Mail Server, Web Panel solution.",
+            },
+        ];
+
+        let currentIndex = 0;
+
+        function updateContent(index) {
+            document.getElementById("dynamicHeading").innerHTML =
+                contentArray[index].heading;
+            document.getElementById("dynamicParagraph").textContent =
+                contentArray[index].paragraph;
+        }
+
+        document
+            .getElementById("leftArrow")
+            .addEventListener("click", function () {
+                currentIndex =
+                    currentIndex === 0 ? contentArray.length - 1 : currentIndex - 1;
+                updateContent(currentIndex);
+            });
+
+        document
+            .getElementById("rightArrow")
+            .addEventListener("click", function () {
+                currentIndex =
+                    currentIndex === contentArray.length - 1 ? 0 : currentIndex + 1;
+                updateContent(currentIndex);
+            });
+
+
+
+
+          // Preloader functionality
+          window.onload = function () {
+            setTimeout(function () {
+                document.getElementById('preloader').style.display = 'none';
+            }, 5000);
+        };
+
+        // Back-to-top functionality
+        window.onscroll = function () {
+            var backToTop = document.getElementById("backToTop");
+            if (
+                document.body.scrollTop > 200 ||
+                document.documentElement.scrollTop > 200
+            ) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>

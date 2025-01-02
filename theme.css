@@ -1,0 +1,8 @@
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-light);
+}
+
+.hero.dark-mode {
+    color: white;
+}
