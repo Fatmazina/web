@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./theme.css" />
     <link rel="stylesheet" href="./state.css" />
     <link rel="stylesheet" href="./base.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 
 <body>
     <!-- Preloader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <svg>
             <g>
               <path d="M 50,100 A 1,1 0 0 1 50,0"/>
@@ -31,14 +32,25 @@
               </linearGradient>
             </defs>
           </svg>
-    </div>
+    </div> -->
 
     <div class="navbar">
         <div class="navbar__container">
+            <!-- Logo -->
             <div class="navbar__logo">
-                <img style="height: 50px; padding-bottom: 10px; padding-right: 70px" alt="logo" src="./pics/logo.png" />
+                <img alt="logo" src="./pics/logo.png" />
+                <p> NovaCloud</p>
             </div>
-            <nav class="navbar__nav">
+    
+            <!-- Hamburger Menu -->
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    
+            <!-- Nav Links -->
+            <nav class="navbar__nav" id="nav-menu">
                 <ul class="navbar__nav-list">
                     <li class="navbar__nav-item">
                         <a class="navbar__nav-link" href="#section1">About</a>
@@ -53,6 +65,8 @@
             </nav>
         </div>
     </div>
+    
+    
     <container> </container>
     <main>
         <section id="section0" class=" hero__section">
@@ -73,13 +87,22 @@
                     justification) Your Choice of any OS (CentOS, Windows, Debian,
                     Fedora) FREE Reboots
                 </p>
+
+                <div class="hero__dots">
+                    <span class="hero__dot active"></span>
+                    <span class="hero__dot"></span>
+                    <span class="hero__dot"></span>
+                </div>
             </div>
 
             <!-- Arrows for navigation -->
             <div class="hero__arrows">
                 <span class="hero__arrow hero__arrow--left" id="leftArrow">&#9664;</span>
+              
                 <span class="hero__arrow hero__arrow--right" id="rightArrow">&#9654;</span>
+             
             </div>
+        
         </section>
         <section id="section1" class="about-us__section">
             <div class="about-us__background">
@@ -87,15 +110,16 @@
             </div>
 
             <div class="about-us__content">
-                <h1 style="">About us</h1>
-                <p style="color: rgb(190, 190, 190); font-weight: lighter">
-                    At Cloud24 Connect, we understand that every business has unique
-                    needs. That's why we offer complete IT integration services based on
-                    Cloud solutions, available both in predefined packages and fully
+                <h1 >About us</h1>
+                <p>
+                    At <span class="highlight">NovaCloud </span>, we understand that every business has unique
+                    needs. That's why we offer complete <span class="highlight"> IT integration services</span> based on
+                    <span class="highlight">Cloud solutions</span>, available both in predefined packages and fully
                     customized solutions. We are committed to delivering services that
-                    precisely meet your specific needs, all at competitive rates.
+                    precisely meet your <span class="highlight">specific needs</span>, all at <span class="highlight">competitive rates</span> .
                 </p>
             </div>
+         
         </section>
 
     </main>
@@ -113,55 +137,74 @@
         <button class="plans__buttons-container-button" onclick="showCards('cloud-bandwidth')">Cloud VPS Bandwidth Boost</button>
     </div>
 
+  
     <div id="cloud-vps" class="plans__cards-container ">
         <article class="plans__card-container-card">
             <h3 class="plans__card-container-card-title">Cloud VPS Starter</h3>
             <p class="plans__card-container-card-description">
                 Start strong with our Basic VPS Pack: a cost-effective solution for your essential needs.
             </p>
+            <hr style="border: 0.1px solid gray; width: 12rem;">
+
             <ul class="plans__card-container-card-list">
-                <li><strong>1</strong> vCPU</li>
-                <li><strong>2GB</strong> RAM</li>
-                <li><strong>50GB</strong> SSD Storage</li>
-                <li><strong>1</strong> Public IP</li>
-                <li><strong>10Mbps</strong> Unmetered</li>
-                <li>24/7 Unlimited Support</li>
+                <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">1 &#8287 </span>  vCPU</li>
+
+                <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">2GB&#8287 </span> RAM</li>
+                <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">50GB&#8287 </span> SSD Storage</li>
+                <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP</li>
+                <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287 </span> Unmetered</li>
+                <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span> Unlimited Support</li>
+            
             </ul>
+            <hr style="border: 0.1px solid gray; width: 12rem;">
+
             <button class="plans__card-container-card-price-button">Get Prices</button>
         </article>
-
+    
         <article class="plans__card-container-card">
             <h3 class="plans__card-container-card-title">Cloud VPS Medium</h3>
             <p class="plans__card-container-card-description">
                 Find the perfect balance with our Medium VPS Pack: enhanced performance and value.
             </p>
+            <hr style="border: 0.1px solid gray; width: 12rem;">
+
             <ul class="plans__card-container-card-list">
-                <li><strong>2</strong> vCPU</li>
-                <li><strong>4GB</strong> RAM</li>
-                <li><strong>100GB</strong> SSD Storage</li>
-                <li><strong>1</strong> Public IP</li>
-                <li><strong>10Mbps</strong> Unmetered</li>
-                <li>24/7 Unlimited Support</li>
+                <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">2 &#8287 </span>  vCPU</li>
+
+                <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">4GB&#8287 </span> RAM</li>
+                <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">100GB&#8287 </span> SSD Storage</li>
+                <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP</li>
+                <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287 </span> Unmetered</li>
+                <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span> Unlimited Support</li>
             </ul>
+            <hr style="border: 0.1px solid gray; width: 12rem;">
+
             <button class="plans__card-container-card-price-button">Get Prices</button>
         </article>
-
+    
         <article class="plans__card-container-card">
             <h3 class="plans__card-container-card-title">Cloud VPS Performance</h3>
             <p class="plans__card-container-card-description">
                 Unlock powerful capabilities with our Performance VPS Pack, designed for demanding apps.
             </p>
+            <hr style="border: 0.1px solid gray; width: 12rem;">
+
             <ul class="plans__card-container-card-list">
-                <li><strong>4</strong> vCPU</li>
-                <li><strong>8GB</strong> RAM</li>
-                <li><strong>200GB</strong> SSD Storage</li>
-                <li><strong>1</strong> Public IP</li>
-                <li><strong>10Mbps</strong> Unmetered</li>
-                <li>24/7 Unlimited Support</li>
+                <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">4 &#8287 </span>  vCPU</li>
+
+                <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">8GB&#8287 </span> RAM</li>
+                <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">200GB&#8287 </span> SSD Storage</li>
+                <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP</li>
+                <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287 </span> Unmetered</li>
+                <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span> Unlimited Support</li>
             </ul>
+            <hr style="border: 0.1px solid gray; width: 12rem;">
+
             <button class="plans__card-container-card-price-button">Get Prices</button>
         </article>
     </div>
+    
+
 
     <div id="cloud-bandwidth" class="plans__cards-container hidden">
         <article class="plans__card-container-card">
@@ -240,7 +283,7 @@
 
     <footer class="footer" >
         <div class="footer-content" >
-            <p>&copy; All Rights Reserved. © 2024 | Cloud24 Connect</p>
+            <p>&copy; All Rights Reserved. © 2024 | NovaCloud</p>
         </div>
     </footer>
 
@@ -270,53 +313,66 @@
             }
         };
 
+       
+
+
         const contentArray = [
-            {
-                heading:
-                    'Best <h style="color:rgb(191,129,202);"> VPS Servers </h> Provider',
-                paragraph:
-                    "One Public IP included with each server (more on request to justification) Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots",
-            },
-            {
-                heading:
-                    'Find Your Perfect <h style="color:rgb(191,129,202);"> Network </h> Solution',
-                paragraph:
-                    "VPS with Unmetered Bandwidth, Proxy solution, Firewall and VPN As A Service, LoadBalancer As A Service.",
-            },
-            {
-                heading:
-                    'Best <h style="color:rgb(191,129,202);"> Based Cloud Services </h>',
-                paragraph:
-                    "Storage solution, Managed NextCloud, Managed Mail Server, Web Panel solution.",
-            },
-        ];
+    {
+        heading:
+            'Best <h style="color:rgb(191,129,202);"> VPS Servers </h> Provider',
+        paragraph:
+            "One Public IP included with each server (more on request to justification) Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots",
+    },
+    {
+        heading:
+            'Find Your Perfect <h style="color:rgb(191,129,202);"> Network </h> Solution',
+        paragraph:
+            "VPS with Unmetered Bandwidth, Proxy solution, Firewall and VPN As A Service, LoadBalancer As A Service.",
+    },
+    {
+        heading:
+            'Best <h style="color:rgb(191,129,202);"> Based Cloud Services </h>',
+        paragraph:
+            "Storage solution, Managed NextCloud, Managed Mail Server, Web Panel solution, and flexible backup options to ensure data security and recovery.",
+    },
+];
 
-        let currentIndex = 0;
+let currentIndex = 0;
+const dots = document.querySelectorAll(".hero__dot");
 
-        function updateContent(index) {
-            document.getElementById("dynamicHeading").innerHTML =
-                contentArray[index].heading;
-            document.getElementById("dynamicParagraph").textContent =
-                contentArray[index].paragraph;
-        }
+function updateContent(index) {
+    document.getElementById("dynamicHeading").innerHTML =
+        contentArray[index].heading;
+    document.getElementById("dynamicParagraph").textContent =
+        contentArray[index].paragraph;
 
-        document
-            .getElementById("leftArrow")
-            .addEventListener("click", function () {
-                currentIndex =
-                    currentIndex === 0 ? contentArray.length - 1 : currentIndex - 1;
-                updateContent(currentIndex);
-            });
+    // Update active dot
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+    });
+}
 
-        document
-            .getElementById("rightArrow")
-            .addEventListener("click", function () {
-                currentIndex =
-                    currentIndex === contentArray.length - 1 ? 0 : currentIndex + 1;
-                updateContent(currentIndex);
-            });
+// Arrow navigation
+document.getElementById("leftArrow").addEventListener("click", function () {
+    currentIndex = currentIndex === 0 ? contentArray.length - 1 : currentIndex - 1;
+    updateContent(currentIndex);
+});
 
+document.getElementById("rightArrow").addEventListener("click", function () {
+    currentIndex = currentIndex === contentArray.length - 1 ? 0 : currentIndex + 1;
+    updateContent(currentIndex);
+});
 
+// Dots navigation
+dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        currentIndex = i;
+        updateContent(currentIndex);
+    });
+});
+
+// Initial content load
+updateContent(currentIndex);
 
 
           // Preloader functionality
@@ -338,6 +394,14 @@
                 backToTop.classList.remove("show");
             }
         };
+        const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
+
+// Toggle Mobile Menu
+mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); // Show/hide menu
+    mobileMenu.classList.toggle('active'); // Animate hamburger
+});
 
     </script>
 
