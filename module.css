@@ -1,58 +1,4 @@
-/* .navbar {}
 
-.navbar__container {
-    display: flex;
-    position: fixed;
-    align-items: center;
-    top: 0;
-    width: 100%;
-    padding: 10px 90px;
-    z-index: 50;
-    background-color: rgb(17, 17, 17);
-}
-
-.navbar__logo  {
-  
-    display: flex;
-    flex-direction: row;
-    color:rgb(217, 161, 255);
-    font-weight: bold;
-    font-size: x-large;
-    justify-content: center;
-    align-items: center;
-    padding-right: 70px;
-    
-
-}
-.navbar__logo img {
-    height: 40px;
-    padding-bottom: 10px;
-    translate: -5px 0px;
-
-
-}
-
-.navbar__nav {
-    display: flex;
-}
-
-.navbar__nav-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar__nav-item {
-    margin-left: 4rem;
-}
-
-.navbar__nav-link {
-    text-decoration: none;
-    font-size: 18px;
-    color: rgb(217, 161, 255);
-}
- */
 
 
 /* Navbar Container */
@@ -67,7 +13,7 @@
     padding: 10px 20px;
     /* Adjust padding for smaller screens */
     z-index: 50;
-    background-color: rgb(17, 17, 17);
+    background: #0b0d15;
 }
 
 /* Logo */
@@ -228,12 +174,12 @@
 }
 
 .highlight {
-    color: rgb(191, 129, 202)
+    color: rgb(191, 129, 202);
 }
 
 .hero__description {
     font-weight: lighter;
-    color: rgb(190, 190, 190)
+    color: rgb(190, 190, 190);
 }
 
 
@@ -258,7 +204,7 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    width: 80%;
+    width: 85%;
     color: rgb(190, 190, 190);
      font-weight: lighter
 
@@ -272,7 +218,6 @@
 
 
 .plans__section {
-    background-color: rgb(17, 17, 17);
     height: 80vh;
     padding: 10vh 0px;
 }
@@ -293,7 +238,9 @@
 }
 
 
+  
 .plans__card-container-card {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -304,6 +251,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    background: #000000; /* Solid background */
+
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -315,19 +266,21 @@
     border-radius: 1rem;
     border-bottom-right-radius: 0rem;
     border-bottom-left-radius: 0rem;
-
-    background-color: rgb(217, 161, 255);
+    z-index: -11;
+    background-color: rgb(0, 0, 0);
     height: 20%;
+    color:rgb(191, 129, 202);
 }
 
 .plans__card-container-card-description {
 
-    color: #555;
+    color: #ffffff;
     padding-left: 1rem;
     padding-right: 1rem;
 
     font-size: 0.9rem;
 }
+
 
 .plans__card-container-card-list {
     display: flex;
@@ -337,28 +290,29 @@
 
 .plans__card-container-card-list li {
     margin-bottom: 0.7rem;
-    font-weight: bold;
     display: flex;
     width: max-content;
     justify-content: start;
 
     align-items: center;
-    color: gray;
+    color: rgb(255, 255, 255);
 
 }
 
 .plans__card-container-card-list i {
     padding-right: 1rem;
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 .plans__card-container-card-list-info {
-    color: black;
+    color: rgb(217, 161, 255); 
+       font-weight: bold;
+
 }
 
 .plans__card-container-card-price-button {
     background-color: rgb(217, 161, 255);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
     border-radius: 0.5rem;
@@ -367,7 +321,7 @@
     margin-top: 0.5rem;
     margin-left: 4rem;
     margin-right: 4rem;
-
+   font-weight: bold;
 }
 
 
@@ -383,7 +337,7 @@
 .plans__buttons-container-button {
     padding: 10px 20px;
     margin: 0 10px;
-    
+    font-weight: bold;
     background-color: #f1f1f1;
     border: 1px solid;
     cursor: pointer;
@@ -394,12 +348,70 @@
 
 
 
+  
+
+  
+  /* Register the --angle property */
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  /* Animated border */
+  .plans__card-container-card::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* Cover the entire card */
+    padding: 3px; /* Border thickness */
+    border-radius: 10px; /* Rounded corners */
+    background: conic-gradient(
+      from var(--angle), 
+      #ff4545, #00ff99, #58B8FA, #DC67C3, #f45353
+    ); /* Animated gradient */
+    
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* Mask to reveal only border */
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask-composite: exclude;
+    z-index: -1;
+    
+    /* Apply the animation */
+    animation: spin 3s linear infinite;
+  }
+  
+  /* Spin animation for gradient */
+  @keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 .contact {
-    background-color: rgb(17, 17, 17);
     height: 70vh;
     padding: 10vh 0px;
 }
@@ -415,9 +427,20 @@
     padding: 30px;
     width: 60%;
     margin: 20px auto;
-    border-radius: 10px;
+ 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+
+    border-radius: 1rem;
+    
+    background: #000000; /* Solid background */
+
+    position: relative;
+    z-index: 1;
+}
+.contact__form_info {
+    background-color: #000000;
+    color: white;
 }
 
 .contact__form h2 {
@@ -439,21 +462,57 @@
 
 .contact__button {
     background-color: rgb(217, 161, 255);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
     font-weight: bold;
     width: 50%;
+    font-weight: bold;
 }
 
 .contact__button:hover {
     background-color: #444;
 }
-
+  /* Animated border */
+  .contact__form::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* Cover the entire card */
+    padding: 3px; /* Border thickness */
+    border-radius: 10px; /* Rounded corners */
+    background: conic-gradient(
+      from var(--angle), 
+      #ff4545, #00ff99, #58B8FA, #DC67C3, #f45353
+    ); /* Animated gradient */
+    
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* Mask to reveal only border */
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask-composite: exclude;
+    z-index: -1;
+    
+    /* Apply the animation */
+    animation: spin 3s linear infinite;
+  }
+  
+  /* Spin animation for gradient */
+  @keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+  
 .footer {
-    background-color: #333;
+    background-color: #333333;
     color: white;
     text-align: center;
     padding: 20px 0;

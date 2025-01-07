@@ -14,7 +14,7 @@
 
 .plans__buttons-container-button.active {
     background-color: rgb(217, 161, 255);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .plans__buttons-container-button:hover {
