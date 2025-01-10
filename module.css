@@ -57,9 +57,8 @@
 }
 
 /* Hamburger Menu */
-.navbar__toggle {
+/* .navbar__toggle {
     display: none;
-    /* Hide by default */
     flex-direction: column;
     cursor: pointer;
 }
@@ -69,45 +68,22 @@
     height: 3px;
     width: 25px;
     margin: 3px 0;
+} */
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    height: 24px; /* Ensure bars are spaced evenly */
+    width: 30px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .navbar__toggle {
-        display: flex;
-        /* Show hamburger */
-        width: 100%;
-        align-items: end;
-        padding: 10%;
-        justify-content: center;
-
-    }
-
-    .navbar__nav {
-        display: none;
-        /* Hide menu initially */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: rgb(17, 17, 17);
-        padding: 20px 0;
-    }
-
-    .navbar__nav.active {
-        display: flex;
-        /* Show menu when active */
-        background-color: #f1f1f1;
-        flex-direction: row;
-
-
-    }
-
-    .navbar__nav-item {
-        margin: 1rem 0;
-        /* Add spacing between menu items */
-    }
+.navbar__toggle .bar {
+    background-color: rgb(217, 161, 255);
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 
