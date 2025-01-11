@@ -1,19 +1,7 @@
 :root{
-    --base-color: #ffffff;
-    --base-variant: #ddebf6;
-    --text-color: #ffffff;
-    --secondary-text: #232738;
-    --primary-color: #3a435d;
-    --sec-color:  rgb(87, 71, 228);
---shadow:rgba(0, 0, 0, 0.4);
-    --accent-color: rgb(87, 71, 228);
+ 
 
     
-  }
-  .darkmode{
-
-
-
     --base-color: #0b0d15;
     --base-variant: #000000;
     --text-color: rgb(190, 190, 190);
@@ -23,6 +11,18 @@
     --shadow:#2d2d2d;
 
     --accent-color: rgb(217, 161, 255);
+  }
+  .darkmode{
+    --base-color: #ffffff;
+    --base-variant: #ddebf6;
+    --text-color: #ffffff;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --sec-color:  rgb(87, 71, 228);
+--shadow:rgba(0, 0, 0, 0.4);
+    --accent-color: rgb(87, 71, 228);
+
+
   }
 
   .cta-button{
