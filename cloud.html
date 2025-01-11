@@ -2,656 +2,606 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaCloud</title>
-    <link rel="icon" href="./pics/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./layout.css" />
-    <link rel="stylesheet" href="./module.css" />
-    <link rel="stylesheet" href="./theme.css" />
-    <link rel="stylesheet" href="./state.css" />
-    <link rel="stylesheet" href="./base.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCloud</title>
+  <link rel="icon" href="./pics/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./layout.css" />
+  <link rel="stylesheet" href="./module.css" />
+  <link rel="stylesheet" href="./theme.css" />
+  <link rel="stylesheet" href="./state.css" />
+  <link rel="stylesheet" href="./base.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader"
-    id="preloader">
-        <svg>
-            <g>
-              <path d="M 50,100 A 1,1 0 0 1 50,0"/>
-            </g>
-            <g>
-              <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
-            </g>
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:#58B8FA;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#DC67C3;stop-opacity:1" />
-              </linearGradient>
-            </defs>
-          </svg>
-    </div>
-
-    <div  class="navbar">
-        <div class="navbar__container">
-            <!-- Logo -->
-            <div class="navbar__logo">
-                <img alt="logo" src="./pics/logo.png" />
-                <p class="colorful-text"> NovaCloud</p>
-            </div>
-      
-              
-
-            <nav class="navbar__nav" id="nav-menu">
-                <ul class="navbar__nav-list">
-                    <li class="navbar__nav-item">
-                        <a class="navbar__nav-link" href="#section1">About</a>
-                    </li>
-                    <li class="navbar__nav-item">
-                        <a class="navbar__nav-link" href="#section2">Cloud VPS Plans</a>
-                    </li>
-                    <li class="navbar__nav-item">
-                        <a class="navbar__nav-link" href="#section3">Contact</a>
-                    </li>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                      </a>
-                </ul>
-              
-
-
-                <label  class="switch">
-                    <input id="input" type="checkbox" checked="darkTheme" />
-                    <div class="slider round">
-                      <div class="sun-moon">
-                        <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                  
-                        <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                        <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="50"></circle>
-                        </svg>
-                      </div>
-                      <div class="stars">
-                        <svg id="star-1" class="star" viewBox="0 0 20 20">
-                          <path
-                            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                          ></path>
-                        </svg>
-                        <svg id="star-2" class="star" viewBox="0 0 20 20">
-                          <path
-                            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                          ></path>
-                        </svg>
-                        <svg id="star-3" class="star" viewBox="0 0 20 20">
-                          <path
-                            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                          ></path>
-                        </svg>
-                        <svg id="star-4" class="star" viewBox="0 0 20 20">
-                          <path
-                            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </label>
-
-
-
-            </nav>
-            <!-- <label  class="switch">
-                <input id="input" type="checkbox" checked="darkTheme" />
-                <div class="slider round">
-                  <div class="sun-moon">
-                    <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-              
-                    <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                    <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="50"></circle>
-                    </svg>
-                  </div>
-                  <div class="stars">
-                    <svg id="star-1" class="star" viewBox="0 0 20 20">
-                      <path
-                        d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                      ></path>
-                    </svg>
-                    <svg id="star-2" class="star" viewBox="0 0 20 20">
-                      <path
-                        d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                      ></path>
-                    </svg>
-                    <svg id="star-3" class="star" viewBox="0 0 20 20">
-                      <path
-                        d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                      ></path>
-                    </svg>
-                    <svg id="star-4" class="star" viewBox="0 0 20 20">
-                      <path
-                        d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-              </label> -->
-        </div>
-        
-    </div>
-  
-    
-    <container> /* From Uiverse.io by RiccardoRapelli */ 
-<label class="switch">
-  <input id="input" type="checkbox" checked="darkTheme" />
-  <div class="slider round">
-    <div class="sun-moon">
-      <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-
-      <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-    </div>
-    <div class="stars">
-      <svg id="star-1" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-      <svg id="star-2" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-      <svg id="star-3" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-      <svg id="star-4" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-    </div>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <svg>
+      <g>
+        <path d="M 50,100 A 1,1 0 0 1 50,0" />
+      </g>
+      <g>
+        <path d="M 50,75 A 1,1 0 0 0 50,-25" />
+      </g>
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop class="preloder__firststop" offset="0%" />
+          <stop class="preloder__secondstop"offset="100%"  />
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
-</label>
-</container>
-    <main>
-        <section id="section0" class=" hero__section">
-            <div>
-                <img class="hero__background" alt="background" src="" />
+
+  <div class="navbar">
+    <div class="navbar__container">
+      <!-- Logo -->
+      <div class="navbar__logo">
+        <img alt="logo" src="./pics/logo.png" />
+        <p class="colorful-text"> NovaCloud</p>
+      </div>
+
+
+
+      <nav class="navbar__nav" id="nav-menu">
+        <ul class="navbar__nav-list">
+          <li class="navbar__nav-item">
+            <a class="navbar__nav-link" href="#section1">About</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a class="navbar__nav-link" href="#section2">Cloud VPS Plans</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a class="navbar__nav-link" href="#section3">Contact</a>
+          </li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </ul>
+
+
+
+        <label class="switch">
+          <input id="input" type="checkbox" checked="darkTheme" />
+          <div class="slider round">
+            <div class="sun-moon">
+              <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+
+              <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
+              <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+              </svg>
             </div>
-
-            <div class="hero__content">
-                
-                <img class="hero__logo" alt="logo" src="./pics/logo.png" />
-               
-                   
-                <h2>
-                   
-                    <span class="colorful-text">
-                        NovaCloud </span> 
-                </h2>
-               
-                <h1 class="hero__title" id="dynamicHeading">
-                    Best
-                    <span class="highlight">
-                        VPS Servers </span> Provider
-                </h1>
-                <p class="hero__description" id="dynamicParagraph">
-                    One Public IP included with each server (more on request to
-                    justification) Your Choice of any OS (CentOS, Windows, Debian,
-                    Fedora) FREE Reboots
-                </p>
-
-                <div class="hero__dots">
-                    <span class="hero__dot active"></span>
-                    <span class="hero__dot"></span>
-                    <span class="hero__dot"></span>
-                </div>
+            <div class="stars">
+              <svg id="star-1" class="star" viewBox="0 0 20 20">
+                <path
+                  d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                </path>
+              </svg>
+              <svg id="star-2" class="star" viewBox="0 0 20 20">
+                <path
+                  d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                </path>
+              </svg>
+              <svg id="star-3" class="star" viewBox="0 0 20 20">
+                <path
+                  d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                </path>
+              </svg>
+              <svg id="star-4" class="star" viewBox="0 0 20 20">
+                <path
+                  d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+                </path>
+              </svg>
             </div>
-
-            <!-- Arrows for navigation -->
-            <div class="hero__arrows">
-                <span class="hero__arrow hero__arrow--left" id="leftArrow">&#9664;</span>
-              
-                <span class="hero__arrow hero__arrow--right" id="rightArrow">&#9654;</span>
-             
-            </div>
-        
-        </section>
-        <section id="section1" class="about-us__section">
-            <div class="about-us__background">
-                <img class="about-us__background" alt="background" src="./pics/bg4.png"  />
-            </div>
-
-            <div class="about-us__content">
-                <h1 >About us</h1>
-                <p>
-                    At <span class="highlight">NovaCloud </span>, we understand that every business has unique
-                    needs. That's why we offer complete <span class="highlight"> IT integration services</span> based on
-                    <span class="highlight">Cloud solutions</span>, available both in predefined packages and fully
-                    customized solutions. We are committed to delivering services that
-                    precisely meet your <span class="highlight">specific needs</span>, all at <span class="highlight">competitive rates</span> .
-                </p>
-            </div>
-         
-        </section>
-
-    </main>
+          </div>
+        </label>
 
 
 
-   <section id="section2" class="plans__section">
-    <h2 class="plans__title" >
-        Ready to get started? Choose your VPS Plan.
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <label class="switch">
+    <input id="input" type="checkbox" checked="darkTheme" />
+    <div class="slider round">
+      <div class="sun-moon">
+        <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+
+        <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+        <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+        </svg>
+      </div>
+      <div class="stars">
+        <svg id="star-1" class="star" viewBox="0 0 20 20">
+          <path
+            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+          </path>
+        </svg>
+        <svg id="star-2" class="star" viewBox="0 0 20 20">
+          <path
+            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+          </path>
+        </svg>
+        <svg id="star-3" class="star" viewBox="0 0 20 20">
+          <path
+            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+          </path>
+        </svg>
+        <svg id="star-4" class="star" viewBox="0 0 20 20">
+          <path
+            d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z">
+          </path>
+        </svg>
+      </div>
+    </div>
+  </label>
+<container>
+    <section id="section0" class=" hero__section">
+      <div>
+        <img class="hero__background" alt="background" src="" />
+      </div>
+
+      <div class="hero__content">
+
+        <img class="hero__logo" alt="logo" src="./pics/logo.png" />
+
+
+        <h2>
+
+          <span class="colorful-text">
+            NovaCloud </span>
+        </h2>
+
+        <h1 class="hero__title" id="dynamicHeading">
+          Best
+          <span class="highlight">
+            VPS Servers </span> Provider
+        </h1>
+        <p class="hero__description" id="dynamicParagraph">
+          One Public IP included with each server (more on request to
+          justification) Your Choice of any OS (CentOS, Windows, Debian,
+          Fedora) FREE Reboots
+        </p>
+
+        <div class="hero__dots">
+          <span class="hero__dot active"></span>
+          <span class="hero__dot"></span>
+          <span class="hero__dot"></span>
+        </div>
+      </div>
+
+      <!-- Arrows for navigation -->
+      <div class="hero__arrows">
+        <span class="hero__arrow hero__arrow--left" id="leftArrow">&#9664;</span>
+
+        <span class="hero__arrow hero__arrow--right" id="rightArrow">&#9654;</span>
+
+      </div>
+
+    </section>
+    <section id="section1" class="about-us__section">
+      <div class="about-us__background">
+        <img class="about-us__background" alt="background" src="./pics/bg4.png" />
+      </div>
+
+      <div class="about-us__content">
+        <h1>About us</h1>
+        <p>
+          At <span class="highlight">NovaCloud </span>, we understand that every business has unique
+          needs. That's why we offer complete <span class="highlight"> IT integration services</span> based on
+          <span class="highlight">Cloud solutions</span>, available both in predefined packages and fully
+          customized solutions. We are committed to delivering services that
+          precisely meet your <span class="highlight">specific needs</span>, all at <span class="highlight">competitive
+            rates</span> .
+        </p>
+      </div>
+
+    </section>
+
+
+
+
+  <section id="section2" class="plans__section">
+    <h2 class="plans__title">
+      Ready to get started? Choose your VPS Plan.
     </h2>
     <div class="plans__buttons-container">
-        <button class="plans__buttons-container-button active" onclick="showCards('cloud-vps')">Cloud VPS</button>
-        <button class="plans__buttons-container-button" onclick="showCards('cloud-bandwidth')">Cloud VPS Bandwidth Boost</button>
+      <button class="plans__buttons-container-button active" onclick="showCards('cloud-vps')">Cloud VPS</button>
+      <button class="plans__buttons-container-button" onclick="showCards('cloud-bandwidth')">Cloud VPS Bandwidth
+        Boost</button>
     </div>
-    
+
     <div id="cloud-vps" class="plans__cards-container ">
-        <article class="plans__card-container-card">
-            <h3 class="plans__card-container-card-title">Cloud VPS Starter</h3>
-            <p class="plans__card-container-card-description">
-                Start strong with our Basic VPS Pack: a cost-effective solution for your essential needs.
-            </p>
-            <hr class="plans__buttons-container-line">
+      <article class="plans__card-container-card">
+        <h3 class="plans__card-container-card-title">Cloud VPS Starter</h3>
+        <p class="plans__card-container-card-description">
+          Start strong with our Basic VPS Pack: a cost-effective solution for your essential needs.
+        </p>
+        <hr class="plans__buttons-container-line">
 
-            <ul class="plans__card-container-card-list">
-                <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">1 &#8287 </span>  vCPU</li>
+        <ul class="plans__card-container-card-list">
+          <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">1 &#8287
+            </span> vCPU</li>
 
-                <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">2GB&#8287 </span> RAM</li>
-                <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">50GB&#8287 </span> SSD Storage</li>
-                <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP</li>
-                <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287 </span> Unmetered</li>
-                <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span> Unlimited Support</li>
-            
-            </ul>
-            <hr class="plans__buttons-container-line">
+          <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">2GB&#8287 </span> RAM
+          </li>
+          <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">50GB&#8287 </span> SSD
+            Storage</li>
+          <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP
+          </li>
+          <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287
+            </span> Unmetered</li>
+          <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span>
+            Unlimited Support</li>
 
-            <button class="plans__card-container-card-price-button">Get Prices</button>
-        </article>
-    
-        <article class="plans__card-container-card animated-card">
-            <h3 class="plans__card-container-card-title">Cloud VPS Medium</h3>
-            <p class="plans__card-container-card-description">
-                Find the perfect balance with our Medium VPS Pack: enhanced performance and value.
-            </p>
-            <hr class="plans__buttons-container-line">
+        </ul>
+        <hr class="plans__buttons-container-line">
 
-            <ul class="plans__card-container-card-list">
-                <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">2 &#8287 </span>  vCPU</li>
+        <button class="plans__card-container-card-price-button">Get Prices</button>
+      </article>
 
-                <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">4GB&#8287 </span> RAM</li>
-                <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">100GB&#8287 </span> SSD Storage</li>
-                <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP</li>
-                <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287 </span> Unmetered</li>
-                <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span> Unlimited Support</li>
-            </ul>
-            <hr class="plans__buttons-container-line">
+      <article class="plans__card-container-card animated-card">
+        <h3 class="plans__card-container-card-title">Cloud VPS Medium</h3>
+        <p class="plans__card-container-card-description">
+          Find the perfect balance with our Medium VPS Pack: enhanced performance and value.
+        </p>
+        <hr class="plans__buttons-container-line">
 
-            <button class="plans__card-container-card-price-button">Get Prices</button>
-        </article>
-    
-        <article class="plans__card-container-card">
-            <h3 class="plans__card-container-card-title">Cloud VPS Performance</h3>
-            <p class="plans__card-container-card-description">
-                Unlock powerful capabilities with our Performance VPS Pack, designed for demanding apps.
-            </p>
-            <hr class="plans__buttons-container-line">
+        <ul class="plans__card-container-card-list">
+          <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">2 &#8287
+            </span> vCPU</li>
 
-            <ul class="plans__card-container-card-list">
-                <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">4 &#8287 </span>  vCPU</li>
+          <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">4GB&#8287 </span> RAM
+          </li>
+          <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">100GB&#8287 </span> SSD
+            Storage</li>
+          <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP
+          </li>
+          <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287
+            </span> Unmetered</li>
+          <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span>
+            Unlimited Support</li>
+        </ul>
+        <hr class="plans__buttons-container-line">
 
-                <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">8GB&#8287 </span> RAM</li>
-                <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">200GB&#8287 </span> SSD Storage</li>
-                <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP</li>
-                <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287 </span> Unmetered</li>
-                <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span> Unlimited Support</li>
-            </ul>
-            <hr class="plans__buttons-container-line">
+        <button class="plans__card-container-card-price-button">Get Prices</button>
+      </article>
 
-            <button class="plans__card-container-card-price-button">Get Prices</button>
-        </article>
+      <article class="plans__card-container-card">
+        <h3 class="plans__card-container-card-title">Cloud VPS Performance</h3>
+        <p class="plans__card-container-card-description">
+          Unlock powerful capabilities with our Performance VPS Pack, designed for demanding apps.
+        </p>
+        <hr class="plans__buttons-container-line">
+
+        <ul class="plans__card-container-card-list">
+          <li><i class="fas fa-microchip gray-icon"></i><span class="plans__card-container-card-list-info">4 &#8287
+            </span> vCPU</li>
+
+          <li><i class="fas fa-memory  "></i> <span class="plans__card-container-card-list-info">8GB&#8287 </span> RAM
+          </li>
+          <li><i class="fas fa-hdd"></i><span class="plans__card-container-card-list-info">200GB&#8287 </span> SSD
+            Storage</li>
+          <li><i class="fas fa-globe"></i> <span class="plans__card-container-card-list-info">1 &#8287 </span>Public IP
+          </li>
+          <li><i class="fas fa-tachometer-alt"></i> <span class="plans__card-container-card-list-info">10Mbps &#8287
+            </span> Unmetered</li>
+          <li><i class="fas fa-headset"></i> <span class="plans__card-container-card-list-info">24/7 &#8287 </span>
+            Unlimited Support</li>
+        </ul>
+        <hr class="plans__buttons-container-line">
+
+        <button class="plans__card-container-card-price-button">Get Prices</button>
+      </article>
     </div>
-    
+
 
 
     <div id="cloud-bandwidth" class="plans__cards-container hidden">
-        <article class="plans__card-container-card">
-            <h3 class="plans__card-container-card-title">VPS Server 1Gbps</h3>
-            <p class="plans__card-container-card-description">
-                Elevate your business with our Performance VPS Pack featuring 1Gbps bandwidth.
-            </p>
-            <ul class="plans__card-container-card-list">
-                <li><strong>4</strong> vCPU</li>
-                <li><strong>8GB</strong> RAM</li>
-                <li><strong>200GB</strong> SSD Storage</li>
-                <li><strong>1</strong> Public IP</li>
-                <li><strong>1Gbps</strong> Unmetered</li>
-                <li>24/7 Unlimited Support</li>
-            </ul>
-            <button class="plans__card-container-card-price-button">Get Prices</button>
-        </article>
+      <article class="plans__card-container-card">
+        <h3 class="plans__card-container-card-title">VPS Server 1Gbps</h3>
+        <p class="plans__card-container-card-description">
+          Elevate your business with our Performance VPS Pack featuring 1Gbps bandwidth.
+        </p>
+        <ul class="plans__card-container-card-list">
+          <li><strong>4</strong> vCPU</li>
+          <li><strong>8GB</strong> RAM</li>
+          <li><strong>200GB</strong> SSD Storage</li>
+          <li><strong>1</strong> Public IP</li>
+          <li><strong>1Gbps</strong> Unmetered</li>
+          <li>24/7 Unlimited Support</li>
+        </ul>
+        <button class="plans__card-container-card-price-button">Get Prices</button>
+      </article>
 
-        <article class="plans__card-container-card">
-            <h3 class="plans__card-container-card-title">VPS Server 10Gbps</h3>
-            <p class="plans__card-container-card-description">
-                Push the limits with our Performance VPS Pack boasting 10Gbps bandwidth.
-            </p>
-            <ul class="plans__card-container-card-list">
-                <li><strong>4</strong> vCPU</li>
-                <li><strong>8GB</strong> RAM</li>
-                <li><strong>200GB</strong> SSD Storage</li>
-                <li><strong>1</strong> Public IP</li>
-                <li><strong>10Gbps</strong> Unmetered</li>
-                <li>24/7 Unlimited Support</li>
-            </ul>
-            <button class="plans__card-container-card-price-button">Get Prices</button>
-        </article>
+      <article class="plans__card-container-card">
+        <h3 class="plans__card-container-card-title">VPS Server 10Gbps</h3>
+        <p class="plans__card-container-card-description">
+          Push the limits with our Performance VPS Pack boasting 10Gbps bandwidth.
+        </p>
+        <ul class="plans__card-container-card-list">
+          <li><strong>4</strong> vCPU</li>
+          <li><strong>8GB</strong> RAM</li>
+          <li><strong>200GB</strong> SSD Storage</li>
+          <li><strong>1</strong> Public IP</li>
+          <li><strong>10Gbps</strong> Unmetered</li>
+          <li>24/7 Unlimited Support</li>
+        </ul>
+        <button class="plans__card-container-card-price-button">Get Prices</button>
+      </article>
     </div>
-</section>
+  </section>
 
 
-    <section id="section3" class="contact">
-        <h2 class="contact__title" >
-            Need Help? Sure we are Online!
-        </h2>
+  <section id="section3" class="contact">
+    <h2 class="contact__title">
+      Need Help? Sure we are Online!
+    </h2>
 
-        <div class="contact__form">
-            <form action="#" method="POST">
-                <div class="contact__form-row">
-                    <input class="contact__form_info" type="text" name="first_name" placeholder="First Name" required />
-                    <input class="contact__form_info" type="text" name="last_name" placeholder="Last Name" required />
-                </div>
-                <div class="contact__form-row">
-                    <input class="contact__form_info" type="email" name="email" placeholder="Your Email" required />
-                    <input class="contact__form_info" type="tel" name="phone" placeholder="Your Phone (Optional)" />
-                </div>
-                <div class="contact__form-row">
-                    <select class="contact__form_info" name="option" required>
-                        <option value="" disabled selected>
-                            Choose an Option or leave it for Others
-                        </option>
-                        <option value="support">Support</option>
-                        <option value="sales">Sales</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="contact__form-row">
-                    <textarea class="contact__form_info" name="details" placeholder="Give us more details..." required></textarea>
-                </div>
-                <div class="contact__button-container"> 
-                    <button type="submit" class="contact__button"
-                
-        >
-                        Submit
-                    </button>
-                </div>
-            </form>
+    <div class="contact__form">
+      <form action="#" method="POST">
+        <div class="contact__form-row">
+          <input class="contact__form_info" type="text" name="first_name" placeholder="First Name" required />
+          <input class="contact__form_info" type="text" name="last_name" placeholder="Last Name" required />
         </div>
-    </section>
-
-    <footer class="footer" >
-        <div class="footer-content" >
-            <p>&copy; All Rights Reserved. © 2024 | NovaCloud</p>
+        <div class="contact__form-row">
+          <input class="contact__form_info" type="email" name="email" placeholder="Your Email" required />
+          <input class="contact__form_info" type="tel" name="phone" placeholder="Your Phone (Optional)" />
         </div>
-    </footer>
+        <div class="contact__form-row">
+          <select class="contact__form_info" name="option" required>
+            <option value="" disabled selected>
+              Choose an Option or leave it for Others
+            </option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="contact__form-row">
+          <textarea class="contact__form_info" name="details" placeholder="Give us more details..." required></textarea>
+        </div>
+        <div class="contact__button-container">
+          <button type="submit" class="contact__button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    <a href="#top" class="back-to-top" id="backToTop"> &#x25B2; </a>
-    <!-- <script src="//code.tidio.co/0svrmisroyf7rrk3j8icigutu74mhydt.js" async></script>   -->
-     
-     
-     <script>
-          setTimeout(() => {
-    const script = document.createElement('script');
-    script.src = "//code.tidio.co/0svrmisroyf7rrk3j8icigutu74mhydt.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, 5000); // Load Tidio after preloader is hidden
-        function showCards(sectionId) {
-            document.getElementById("cloud-vps").classList.add("hidden");
-            document.getElementById("cloud-bandwidth").classList.add("hidden");
-            document.getElementById(sectionId).classList.remove("hidden");
-            var buttons = document.querySelectorAll(".plans__buttons-container-button");
-            buttons.forEach(function (button) {
-                button.classList.remove("active");
-            });
-            event.target.classList.add("active");
-        }
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; All Rights Reserved. © 2024 | NovaCloud</p>
+    </div>
+  </footer>
 
-        window.onscroll = function () {
-            var backToTop = document.getElementById("backToTop");
-            if (
-                document.body.scrollTop > 200 ||
-                document.documentElement.scrollTop > 200
-            ) {
-                backToTop.classList.add("show");
-            } else {
-                backToTop.classList.remove("show");
-            }
-        };
-
-       
+  <a href="#top" class="back-to-top" id="backToTop"> &#x25B2; </a>
+</container>
 
 
-        const contentArray = [
-    {
+
+  <script>
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = "//code.tidio.co/0svrmisroyf7rrk3j8icigutu74mhydt.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }, 5000); // Load Tidio after preloader is hidden
+    function showCards(sectionId) {
+      document.getElementById("cloud-vps").classList.add("hidden");
+      document.getElementById("cloud-bandwidth").classList.add("hidden");
+      document.getElementById(sectionId).classList.remove("hidden");
+      var buttons = document.querySelectorAll(".plans__buttons-container-button");
+      buttons.forEach(function (button) {
+        button.classList.remove("active");
+      });
+      event.target.classList.add("active");
+    }
+
+    window.onscroll = function () {
+      var backToTop = document.getElementById("backToTop");
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
+
+
+
+
+    const contentArray = [
+      {
         heading:
-            'Best <h style="color:rgb(191,129,202);"> VPS Servers </h> Provider',
+          'Best <h  class="highlight"> VPS Servers </h> Provider',
         paragraph:
-            "One Public IP included with each server (more on request to justification) Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots",
-    },
-    {
+          "One Public IP included with each server (more on request to justification) Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots",
+      },
+      {
         heading:
-            'Find Your Perfect <h style="color:rgb(191,129,202);"> Network </h> Solution',
+          'Find Your Perfect <h  class="highlight"> Network </h> Solution',
         paragraph:
-            "VPS with Unmetered Bandwidth, Proxy solution, Firewall and VPN As A Service, LoadBalancer As A Service.",
-    },
-    {
+          "VPS with Unmetered Bandwidth, Proxy solution, Firewall and VPN As A Service, LoadBalancer As A Service.",
+      },
+      {
         heading:
-            'Best <h style="color:rgb(191,129,202);"> Based Cloud Services </h>',
+          'Best <h  class="highlight"> Based Cloud Services </h>',
         paragraph:
-            "Storage solution, Managed NextCloud, Managed Mail Server, Web Panel solution, and flexible backup options to ensure data security and recovery.",
-    },
-];
+          "Storage solution, Managed NextCloud, Managed Mail Server, Web Panel solution, and flexible backup options to ensure data security and recovery.",
+      },
+    ];
 
-let currentIndex = 0;
-const dots = document.querySelectorAll(".hero__dot");
+    let currentIndex = 0;
+    const dots = document.querySelectorAll(".hero__dot");
 
-function updateContent(index) {
-    document.getElementById("dynamicHeading").innerHTML =
+    function updateContent(index) {
+      document.getElementById("dynamicHeading").innerHTML =
         contentArray[index].heading;
-    document.getElementById("dynamicParagraph").textContent =
+      document.getElementById("dynamicParagraph").textContent =
         contentArray[index].paragraph;
 
-    // Update active dot
-    dots.forEach((dot, i) => {
+      // Update active dot
+      dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === index);
+      });
+    }
+
+    // Arrow navigation
+    document.getElementById("leftArrow").addEventListener("click", function () {
+      currentIndex = currentIndex === 0 ? contentArray.length - 1 : currentIndex - 1;
+      updateContent(currentIndex);
     });
-}
 
-// Arrow navigation
-document.getElementById("leftArrow").addEventListener("click", function () {
-    currentIndex = currentIndex === 0 ? contentArray.length - 1 : currentIndex - 1;
-    updateContent(currentIndex);
-});
+    document.getElementById("rightArrow").addEventListener("click", function () {
+      currentIndex = currentIndex === contentArray.length - 1 ? 0 : currentIndex + 1;
+      updateContent(currentIndex);
+    });
 
-document.getElementById("rightArrow").addEventListener("click", function () {
-    currentIndex = currentIndex === contentArray.length - 1 ? 0 : currentIndex + 1;
-    updateContent(currentIndex);
-});
-
-// Dots navigation
-dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
+    // Dots navigation
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
         currentIndex = i;
         updateContent(currentIndex);
+      });
     });
-});
 
-// Initial content load
-updateContent(currentIndex);
+    // Initial content load
+    updateContent(currentIndex);
 
 
-          // Preloader functionality
-          window.onload = function () {
-            setTimeout(function () {
-                document.getElementById('preloader').style.display = 'none';
-            }, 5000);
-        };
+    // Preloader functionality
+    window.onload = function () {
+      setTimeout(function () {
+        document.getElementById('preloader').style.display = 'none';
+      }, 5000);
+    };
 
-        // Back-to-top functionality
-        window.onscroll = function () {
-            var backToTop = document.getElementById("backToTop");
-            if (
-                document.body.scrollTop > 200 ||
-                document.documentElement.scrollTop > 200
-            ) {
-                backToTop.classList.add("show");
-            } else {
-                backToTop.classList.remove("show");
-            }
-        };
-    
-      
+    // Back-to-top functionality
+    window.onscroll = function () {
+      var backToTop = document.getElementById("backToTop");
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
 
-        let darkmode = localStorage.getItem('darkmode');
-const themeSwitch = document.getElementById('input');
-const heroBackground = document.querySelector('.hero__background'); // Select the image element
 
-// Update the background image based on the theme
-const updateBackgroundImage = () => {
-  if (darkmode === "active") {
-    heroBackground.src = "./pics/555.png"; // Replace with your dark mode image
-  } else {
-    heroBackground.src = "./pics/bg5.png"; // Replace with your light mode image
-  }
-};
 
-const enableDarkmode = () => {
-  document.body.classList.add('darkmode');
-  localStorage.setItem('darkmode', 'active');
-  darkmode = "active";
-  updateBackgroundImage(); // Update the background image
-};
+    let darkmode = localStorage.getItem('darkmode');
+    const themeSwitch = document.getElementById('input');
+    const heroBackground = document.querySelector('.hero__background'); // Select the image element
 
-const disableDarkmode = () => {
-  document.body.classList.remove('darkmode');
-  localStorage.setItem('darkmode', null);
-  darkmode = null;
-  updateBackgroundImage(); // Update the background image
-};
+    // Update the background image based on the theme
+    const updateBackgroundImage = () => {
+      if (darkmode === "active") {
+        heroBackground.src = "./pics/555.png"; // Replace with your dark mode image
+      } else {
+        heroBackground.src = "./pics/bg5.png"; // Replace with your light mode image
+      }
+    };
 
-// Set the initial state based on localStorage
-if (darkmode === "active") enableDarkmode();
-else updateBackgroundImage(); // Ensure the correct initial image is displayed
+    const enableDarkmode = () => {
+      document.body.classList.add('darkmode');
+      localStorage.setItem('darkmode', 'active');
+      darkmode = "active";
+      updateBackgroundImage(); // Update the background image
+    };
 
-// Add click event listener to toggle dark mode
-themeSwitch.addEventListener("click", () => {
-  darkmode = localStorage.getItem('darkmode');
-  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
-});
+    const disableDarkmode = () => {
+      document.body.classList.remove('darkmode');
+      localStorage.setItem('darkmode', null);
+      darkmode = null;
+      updateBackgroundImage(); // Update the background image
+    };
 
-    </script>
+    // Set the initial state based on localStorage
+    if (darkmode === "active") enableDarkmode();
+    else updateBackgroundImage(); // Ensure the correct initial image is displayed
+
+    // Add click event listener to toggle dark mode
+    themeSwitch.addEventListener("click", () => {
+      darkmode = localStorage.getItem('darkmode');
+      darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+    });
+
+  </script>
 
 </body>
 
