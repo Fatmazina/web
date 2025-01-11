@@ -34,6 +34,7 @@
 
 /* Navbar Menu */
 .navbar__nav {
+    overflow: hidden;
     display: flex;
     align-items: center;
     width: 85%;
@@ -48,6 +49,9 @@
     padding: 0;
 }
 
+.navbar__nav-list .icon {
+  display: none;
+}
 .navbar__nav-item {
     margin-left: 4rem;
 }
