@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background: #0b0d15;
+    background: var(--base-color);
     margin: 0;
 
 }
@@ -43,43 +43,43 @@ textarea {
 
 
 .footer a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .footer a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 
 
 .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgb(217, 161, 255);
-    color: white;
-    padding: 15px;
-    border-radius: 20%;
-    font-size: 24px;
-    text-align: center;
-    text-decoration: none;
-    display: none; 
-    transition: background-color 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(217, 161, 255);
+  color: white;
+  padding: 15px;
+  border-radius: 20%;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: none; 
+  transition: background-color 0.3s ease;
 }
 
 .back-to-top:hover {
-    background-color: rgb(217, 161, 255);
-    cursor: pointer;
+  background-color: rgb(217, 161, 255);
+  cursor: pointer;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 
@@ -137,35 +137,35 @@ html {
 
 
 
-svg {
-    overflow: visible;
-    width: 100px;
-    height: 150px;
-  }
-  
-  svg g {
-    animation: slide 2s linear infinite; /* Replace $transition-duration */
-  }
-  
-  svg g:nth-child(2) {
-    animation-delay: 0.5s; /* Replace $transition-duration / 4 */
-  }
-  
-  svg g:nth-child(2) path {
-    animation-delay: 0.5s; /* Replace $transition-duration / 4 */
-    stroke-dasharray: 0px 101; /* Replace $path-length + 1 */
-    stroke-dashoffset: 1px;
-  }
-  
-  svg path {
-    stroke: url(#gradient);
-    stroke-width: 20px;
-    stroke-linecap: round;
-    fill: none;
-    stroke-dasharray: 0 100; /* Replace $path-length */
-    stroke-dashoffset: 0;
-    animation: escalade 2s cubic-bezier(0.8, 0, 0.2, 1) infinite; /* Replace $transition-duration */
-  }
+.preloader svg {
+  overflow: visible;
+  width: 100px;
+  height: 150px;
+}
+
+.preloader svg g {
+  animation: slide 2s linear infinite; /* Replace $transition-duration */
+}
+
+.pre svg g:nth-child(2) {
+  animation-delay: 0.5s; /* Replace $transition-duration / 4 */
+}
+
+.preloader svg g:nth-child(2) path {
+  animation-delay: 0.5s; /* Replace $transition-duration / 4 */
+  stroke-dasharray: 0px 101; /* Replace $path-length + 1 */
+  stroke-dashoffset: 1px;
+}
+
+.preloader svg path {
+  stroke: url(#gradient);
+  stroke-width: 20px;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 0 100; /* Replace $path-length */
+  stroke-dashoffset: 0;
+  animation: escalade 2s cubic-bezier(0.8, 0, 0.2, 1) infinite; /* Replace $transition-duration */
+}
   
   @keyframes slide {
     0% {

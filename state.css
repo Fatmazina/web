@@ -13,8 +13,8 @@
 
 
 .plans__buttons-container-button.active {
-    background-color: rgb(217, 161, 255);
-    color: rgb(0, 0, 0);
+    background-color: var(--accent-color);
+    color: var(--base-color);
 }
 
 .plans__buttons-container-button:hover {

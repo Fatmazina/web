@@ -1,8 +1,435 @@
-body.dark-mode {
-    background-color: #121212;
-    color: var(--text-light);
-}
+:root{
+    /* --base-color: #ffffff;
+    --base-variant: #ddebf6;
+    --text-color: #ffffff;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --sec-color:  rgb(87, 71, 228);
+--shadow:rgba(0, 0, 0, 0.4);
+    --accent-color: rgb(87, 71, 228); */
+    --base-color: #0b0d15;
+    --base-variant: #000000;
+    --text-color: rgb(190, 190, 190);
+    --secondary-text: #ffffff;
+    --primary-color: #ffffff;
+    --sec-color: #000000;
+    --shadow:#2d2d2d;
 
-.hero.dark-mode {
-    color: white;
-}
+    --accent-color: rgb(217, 161, 255);
+    
+  }
+  .darkmode{
+
+
+    --base-color: #ffffff;
+    --base-variant: #ddebf6;
+    --text-color: #ffffff;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --sec-color:  rgb(87, 71, 228);
+--shadow:rgba(0, 0, 0, 0.4);
+    --accent-color: rgb(87, 71, 228);
+
+
+    /* --base-color: #0b0d15;
+    --base-variant: #000000;
+    --text-color: rgb(190, 190, 190);
+    --secondary-text: #ffffff;
+    --primary-color: #ffffff;
+    --sec-color: #000000;
+    --shadow:#2d2d2d;
+
+    --accent-color: rgb(217, 161, 255); */
+  }
+
+  .cta-button{
+    background-color: var(--accent-color);
+  }
+  #theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  #theme-switch svg{
+    fill: var(--primary-color);
+  }
+  #theme-switch svg:last-child{
+    display: none;
+  }
+  .darkmode #theme-switch svg:first-child{
+    display: none;
+  }
+  .darkmode #theme-switch svg:last-child{
+    display: block;
+  }
+
+  .switch {
+    /* margin-left: 700px; */
+
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch #input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    height: 50px;
+    width: 500px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196f3;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .sun-moon {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: yellow;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  #input:checked + .slider {
+    background-color: black;
+  }
+  
+  #input:focus + .slider {
+    -webkit-box-shadow: 0 0 1px #2196f3;
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  #input:checked + .slider .sun-moon {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: white;
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
+  }
+  
+  .moon-dot {
+    opacity: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    fill: gray;
+  }
+  
+  #input:checked + .slider .sun-moon .moon-dot {
+    opacity: 1;
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round .sun-moon {
+    border-radius: 50%;
+  }
+  
+  #moon-dot-1 {
+    left: 10px;
+    top: 3px;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    z-index: 4;
+  }
+  
+  #moon-dot-2 {
+    left: 2px;
+    top: 10px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 4;
+  }
+  
+  #moon-dot-3 {
+    left: 16px;
+    top: 18px;
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    z-index: 4;
+  }
+  
+  #light-ray-1 {
+    left: -8px;
+    top: -8px;
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    z-index: -1;
+    fill: white;
+    opacity: 10%;
+  }
+  
+  #light-ray-2 {
+    left: -50%;
+    top: -50%;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    z-index: -1;
+    fill: white;
+    opacity: 10%;
+  }
+  
+  #light-ray-3 {
+    left: -18px;
+    top: -18px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+    fill: white;
+    opacity: 10%;
+  }
+  
+  .cloud-light {
+    position: absolute;
+    fill: #eee;
+    -webkit-animation-name: cloud-move;
+    animation-name: cloud-move;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+  .cloud-dark {
+    position: absolute;
+    fill: #ccc;
+    -webkit-animation-name: cloud-move;
+    animation-name: cloud-move;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  #cloud-1 {
+    left: 30px;
+    top: 15px;
+    width: 40px;
+  }
+  
+  #cloud-2 {
+    left: 44px;
+    top: 10px;
+    width: 20px;
+  }
+  
+  #cloud-3 {
+    left: 18px;
+    top: 24px;
+    width: 30px;
+  }
+  
+  #cloud-4 {
+    left: 36px;
+    top: 18px;
+    width: 40px;
+  }
+  
+  #cloud-5 {
+    left: 48px;
+    top: 14px;
+    width: 20px;
+  }
+  
+  #cloud-6 {
+    left: 22px;
+    top: 26px;
+    width: 30px;
+  }
+  
+  @-webkit-keyframes cloud-move {
+    0% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  
+    40% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+  
+    80% {
+      -webkit-transform: translateX(-4px);
+      transform: translateX(-4px);
+    }
+  
+    100% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes cloud-move {
+    0% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  
+    40% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+  
+    80% {
+      -webkit-transform: translateX(-4px);
+      transform: translateX(-4px);
+    }
+  
+    100% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  
+  .stars {
+    -webkit-transform: translateY(-32px);
+    -ms-transform: translateY(-32px);
+    transform: translateY(-32px);
+    opacity: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    z-index: 500; /* Ensure it is above other elements */
+
+  }
+  
+  .star {
+    fill: white;
+    position: absolute;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-animation-name: star-twinkle;
+    animation-name: star-twinkle;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    z-index: 500; /* Ensure it is above other elements */
+
+  }
+  
+  #input:checked + .slider .stars {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    
+  }
+  
+  #star-1 {
+    width: 20px;
+    top: 2px;
+    left: 3px;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  
+  #star-2 {
+    width: 6px;
+    top: 16px;
+    left: 3px;
+  }
+  
+  #star-3 {
+    width: 12px;
+    top: 20px;
+    left: 10px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  
+  #star-4 {
+    width: 18px;
+    top: 0px;
+    left: 18px;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+  }
+  
+  @-webkit-keyframes star-twinkle {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    40% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  
+    80% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes star-twinkle {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    40% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  
+    80% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  
